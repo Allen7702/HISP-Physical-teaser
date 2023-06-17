@@ -1,5 +1,4 @@
-import React from 'react';
-import './index.css';
+import React from "react";
 
 function TableComponent({ data }) {
   const { headers, metaData, rows } = data;
@@ -9,7 +8,9 @@ function TableComponent({ data }) {
 
   const getColumnValues = (ou, period) => {
     return uniqueData.map((data) => {
-      const matchingRow = rows.find((row) => row[0] === data && row[1] === ou && row[2] === period);
+      const matchingRow = rows.find(
+        (row) => row[0] === data && row[1] === ou && row[2] === period
+      );
       return matchingRow ? matchingRow[3] : "-";
     });
   };
@@ -20,7 +21,11 @@ function TableComponent({ data }) {
         <tr>
           <th className="border px-4 py-2"></th>
           {uniqueOUs.map((ou, index) => (
-            <th key={index} className="border px-4 py-2" colSpan={uniqueData.length}>
+            <th
+              key={index}
+              className="border px-4 py-2"
+              colSpan={uniqueData.length}
+            >
               {metaData.items[ou].name}
             </th>
           ))}
@@ -45,7 +50,9 @@ function TableComponent({ data }) {
             {uniqueOUs.map((ou, index) => (
               <React.Fragment key={index}>
                 {getColumnValues(ou, period).map((value, idx) => (
-                  <td key={idx} className="border px-4 py-2">{value}</td>
+                  <td key={idx} className="border px-4 py-2">
+                    {value}
+                  </td>
                 ))}
               </React.Fragment>
             ))}
@@ -57,15 +64,6 @@ function TableComponent({ data }) {
 }
 
 export default TableComponent;
-
-
-
-
-
-
-
-
-
 
 // const TableComponent = () => {
 //   const { rows, metaData } = jsonData;
@@ -119,5 +117,3 @@ export default TableComponent;
 //     </table>
 //   );
 // };
-
-
