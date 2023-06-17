@@ -16,7 +16,7 @@ function TableComponent({ data }) {
   };
 
   return (
-    <table className="table-auto border  border-collapse ">
+    <table className="table-auto border  border-collapse mx-10 bg-gray-200">
       <thead>
         <tr>
           <th rowspan="2" className="border px-4 py-2"></th>
