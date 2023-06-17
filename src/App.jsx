@@ -10,13 +10,9 @@ function App() {
           HISP TANZANIA Physical Development Teaser
         </h1>
       </header>
-      <div className="">
         <TableComponent data={data} />
-      </div>
     </div>
   );
 }
 
 export default App;
-
-
