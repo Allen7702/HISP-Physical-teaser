@@ -8,7 +8,7 @@
 
 To get the project up and running, follow these steps:
 
-1. Clone the repository:
+1. To clone the repository:
 
 ```bash
 git clone https://github.com/Allen7702/HISP-Physical-teaser
